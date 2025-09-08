@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<DataConversion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Linked</Name>
+  <Parent />
+  <Previous />
+  <LastModifiedBy>AbdiAhmed</LastModifiedBy>
+  <LastModifiedOn>2025-06-30T17:12:04.5301665+01:00</LastModifiedOn>
+  <CreatedBy>LawrenceTsang</CreatedBy>
+  <CreatedOn>2025-09-08T21:31:30.915909Z</CreatedOn>
+  <Key>Linked</Key>
+  <Folder>false</Folder>
+  <LastModified>2025-06-30T17:12:04.5301665+01:00</LastModified>
+  <Notes />
+  <OpeningInformation />
+  <IsExpanded>true</IsExpanded>
+  <Type>Indiv</Type>
+  <UseDefaultFolder>true</UseDefaultFolder>
+  <UseDataSource>false</UseDataSource>
+  <ResultsFolder>IOFiles\Projections\</ResultsFolder>
+  <FileName />
+  <DebugInfo>true</DebugInfo>
+  <ReThrowException>true</ReThrowException>
+  <ExceptionWriteMax>20</ExceptionWriteMax>
+  <ExceptionAbortMax>1000</ExceptionAbortMax>
+  <EnableDebugRecordId>false</EnableDebugRecordId>
+  <TableSplitDelimiter>_</TableSplitDelimiter>
+  <WorkerPCs>false</WorkerPCs>
+  <MultiThreaded>false</MultiThreaded>
+  <IsHpcRun>false</IsHpcRun>
+  <ThreadsEvenSplit>true</ThreadsEvenSplit>
+  <ParallelSplits>0</ParallelSplits>
+  <Threads>0</Threads>
+  <SequentialStartUp>false</SequentialStartUp>
+  <ProcessResultsOnMaster>true</ProcessResultsOnMaster>
+  <NumberOfWorkers>0</NumberOfWorkers>
+  <StartUpDelay>0</StartUpDelay>
+  <BackupAfterRun>false</BackupAfterRun>
+  <IncludeResultsInBackup>false</IncludeResultsInBackup>
+  <RevisionIds />
+  <MaxRunDuration>0</MaxRunDuration>
+  <Code>Overrides Sub RunCode(Optional OutputResults As Boolean = True)
+    GenCore.WriteProjectionResults.DefaultDelimiter = Chr(9)
+    ExecuteRecords(OutputResults)
+    If OutputResults Then ReferencedProjections.WriteResults()
+End Sub</Code>
+  <ModelName>Linked</ModelName>
+  <Basis>Linked</Basis>
+  <InputsTable>
+    <Name>Linked_Inputs</Name>
+    <Parent />
+    <Previous>Basis</Previous>
+    <LastModifiedBy>AbdiAhmed</LastModifiedBy>
+    <LastModifiedOn>2025-06-30T17:12:04.5301665+01:00</LastModifiedOn>
+    <CreatedBy />
+    <CreatedOn xsi:nil="true" />
+    <Key>Linked_Inputs</Key>
+    <Folder>false</Folder>
+    <LastModified>2025-06-30T17:12:04.5301665+01:00</LastModified>
+    <Notes />
+    <OpeningInformation />
+    <IsExpanded>true</IsExpanded>
+    <IsProjectTable>false</IsProjectTable>
+    <IsDataSource>false</IsDataSource>
+    <IsODBCSource>false</IsODBCSource>
+    <IsWebDataSource>false</IsWebDataSource>
+    <IsDatFileSource>false</IsDatFileSource>
+    <IsDatabaseConnection>false</IsDatabaseConnection>
+    <WebDataSourceIsAdvanced>false</WebDataSourceIsAdvanced>
+    <FilePath>Tables\Linked_Inputs.xls</FilePath>
+    <FileName />
+    <Schema />
+    <Reference>Linked_Inputs!PolNo</Reference>
+    <Delimiter>	</Delimiter>
+    <Internal>false</Internal>
+    <LookUpType>Col</LookUpType>
+    <BasisTable>false</BasisTable>
+    <IndexCols>0</IndexCols>
+    <DoubleType>true</DoubleType>
+    <Rows>1</Rows>
+    <Cols>14</Cols>
+    <ColWidths>43;35;55;63;77;54;37;62;94;70;87;86</ColWidths>
+    <HasHeadings>true</HasHeadings>
+    <RunControlTable>false</RunControlTable>
+  </InputsTable>
+  <CopyProperties>(none)</CopyProperties>
+  <InputOverrides>false</InputOverrides>
+  <ParameterOverrides>false</ParameterOverrides>
+  <ReadFromFileIfAvailable>false</ReadFromFileIfAvailable>
+  <ProjectionInputs />
+  <Dynamic>false</Dynamic>
+  <UseDynamicAttributes>false</UseDynamicAttributes>
+  <ColumnOutputTotals>true</ColumnOutputTotals>
+  <ColumnOutputStart>0</ColumnOutputStart>
+  <ColumnOutputEnd>24</ColumnOutputEnd>
+  <ColumnSumTotals>true</ColumnSumTotals>
+  <ColumnSumStart>0</ColumnSumStart>
+  <ColumnSumEnd>24</ColumnSumEnd>
+  <PerRecordResults>false</PerRecordResults>
+  <SuppressRecordIndices>false</SuppressRecordIndices>
+  <CustomRecordOutput />
+  <Delimiter>Tab</Delimiter>
+  <Targets />
+  <MaxTerm>1200</MaxTerm>
+  <CircularReferenceCheck>false</CircularReferenceCheck>
+  <ResetParamDefaults>false</ResetParamDefaults>
+  <SuppressVariableValidation>false</SuppressVariableValidation>
+  <ApplyGrouping>false</ApplyGrouping>
+  <ApplySorting>false</ApplySorting>
+  <ApplyMergeTest>false</ApplyMergeTest>
+  <Threshold>0</Threshold>
+  <ThreshholdType>None</ThreshholdType>
+  <IsDataConversion>false</IsDataConversion>
+</DataConversion>

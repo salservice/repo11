@@ -1,0 +1,883 @@
+<?xml version="1.0"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Fund</Name>
+  <Parent />
+  <Previous>Linked</Previous>
+  <LastModifiedBy>AbdiAhmed</LastModifiedBy>
+  <LastModifiedOn>2025-08-21T15:32:40.7019284+01:00</LastModifiedOn>
+  <CreatedBy>LawrenceTsang</CreatedBy>
+  <CreatedOn>2025-09-08T21:31:30.915909Z</CreatedOn>
+  <Folder>false</Folder>
+  <LastModified>2025-08-21T15:32:40.7019284+01:00</LastModified>
+  <Notes />
+  <OpeningInformation />
+  <IsExpanded>true</IsExpanded>
+  <Inherit>false</Inherit>
+  <InheritsFrom />
+  <ExternalComponents />
+  <Declarations />
+  <UseDefaultExecuteCode>true</UseDefaultExecuteCode>
+  <VariableOrderId>Fund</VariableOrderId>
+  <Inputs>
+    <Input>
+      <Name>Benefits</Name>
+      <Parent />
+      <Previous>Premiums</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Range />
+      <LookUp />
+      <AllowNulls>false</AllowNulls>
+    </Input>
+    <Input>
+      <Name>PeriodIF</Name>
+      <Parent>Benefits</Parent>
+      <Previous>SumAssured</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>0</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Range />
+      <LookUp />
+      <AllowNulls>false</AllowNulls>
+    </Input>
+    <Input>
+      <Name>PremFreq</Name>
+      <Parent>Premiums</Parent>
+      <Previous>PremInit</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Number of premium payments each year</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>12</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Range />
+      <LookUp />
+      <AllowNulls>false</AllowNulls>
+    </Input>
+    <Input>
+      <Name>PremInit</Name>
+      <Parent>Premiums</Parent>
+      <Previous />
+      <LastModifiedBy>AbdiAhmed</LastModifiedBy>
+      <LastModifiedOn>2025-08-21T15:32:40.7019284+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-08-21T15:32:40.7019284+01:00</LastModified>
+      <Notes>Annual premium at start</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>360.00</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Range />
+      <LookUp />
+      <AllowNulls>false</AllowNulls>
+    </Input>
+    <Input>
+      <Name>Premiums</Name>
+      <Parent />
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Range />
+      <LookUp />
+      <AllowNulls>false</AllowNulls>
+    </Input>
+    <Input>
+      <Name>SumAssured</Name>
+      <Parent>Benefits</Parent>
+      <Previous />
+      <LastModifiedBy>AbdiAhmed</LastModifiedBy>
+      <LastModifiedOn>2025-08-21T15:32:22.4745628+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-08-21T15:32:22.4745628+01:00</LastModified>
+      <Notes>Sum assured</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>0</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Range />
+      <LookUp />
+      <AllowNulls>false</AllowNulls>
+    </Input>
+    <Input>
+      <Name>Term</Name>
+      <Parent>Benefits</Parent>
+      <Previous>PeriodIF</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Term in whole years</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>20</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Range />
+      <LookUp />
+      <AllowNulls>false</AllowNulls>
+    </Input>
+  </Inputs>
+  <Params>
+    <Parameter>
+      <Name>Basis</Name>
+      <Parent />
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>BoS</Name>
+      <Parent>Charges</Parent>
+      <Previous>FMChgePC</Previous>
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-26T14:06:26.6713905+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-26T14:06:26.6713905+01:00</LastModified>
+      <Notes>Bid-offer spread</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>0</Value>
+      <Format>#,##0.00%</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Param_Tbl</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Charges</Name>
+      <Parent />
+      <Previous>Models</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>Expenses</Name>
+      <Parent />
+      <Previous>Charges</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>FMChgePC</Name>
+      <Parent>Charges</Parent>
+      <Previous>RedAllocPeriod</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Annual fund management charge</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>0.01</Value>
+      <Format>#,##0.00%</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>FundGthPC</Name>
+      <Parent>Basis</Parent>
+      <Previous>FundType</Previous>
+      <LastModifiedBy>AbdiAhmed</LastModifiedBy>
+      <LastModifiedOn>2025-07-01T09:06:22.0166552+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-07-01T09:06:22.0166552+01:00</LastModified>
+      <Notes>Annual rate of fund growth</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>0,03</Value>
+      <Format>#,##0.00%</Format>
+      <Override>true</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Param_Tbl</Source>
+    </Parameter>
+    <Parameter>
+      <Name>FundType</Name>
+      <Parent>Basis</Parent>
+      <Previous>LookUp</Previous>
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-30T15:26:10.1971838+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-30T15:26:10.1971838+01:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>Equity</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>InvCon1</Name>
+      <Parent>Charges</Parent>
+      <Previous />
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-26T14:06:00.2640807+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-26T14:06:00.2640807+01:00</LastModified>
+      <Notes>Investment content during reduced allocation period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>0.5</Value>
+      <Format>#,##0.00%</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Param_Tbl</Source>
+    </Parameter>
+    <Parameter>
+      <Name>InvCon2</Name>
+      <Parent>Charges</Parent>
+      <Previous>InvCon1</Previous>
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-26T14:06:04.1918799+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-26T14:06:04.1918799+01:00</LastModified>
+      <Notes>Investment content after reduced allocation period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00%</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Param_Tbl</Source>
+    </Parameter>
+    <Parameter>
+      <Name>LookUp</Name>
+      <Parent>Basis</Parent>
+      <Previous>Param_Tbl</Previous>
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-30T15:26:22.2706525+01:00</LastModifiedOn>
+      <CreatedBy>ClareStone</CreatedBy>
+      <CreatedOn>2025-06-30T15:26:06.0511445+01:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2025-06-30T15:26:22.2706525+01:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Models</Name>
+      <Parent />
+      <Previous>Basis</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>Param_Tbl</Name>
+      <Parent>Basis</Parent>
+      <Previous />
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-30T15:26:36.0118557+01:00</LastModifiedOn>
+      <CreatedBy>ClareStone</CreatedBy>
+      <CreatedOn>2025-06-26T14:05:17.3534385+01:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2025-06-30T15:26:36.0118557+01:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>TableDbl</DataType>
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Parent</Name>
+      <Parent>Models</Parent>
+      <Previous />
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-24T15:58:22.7571395+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-24T15:58:22.7571395+01:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Model</DataType>
+      <Value>Linked</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>RedAllocPeriod</Name>
+      <Parent>Charges</Parent>
+      <Previous>InvCon2</Previous>
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-26T14:06:08.9757113+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-26T14:06:08.9757113+01:00</LastModified>
+      <Notes>Reduced allocation period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>12</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Param_Tbl</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RenExpEsc</Name>
+      <Parent>Expenses</Parent>
+      <Previous>RenExpInit</Previous>
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-26T14:06:38.1174273+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-26T14:06:38.1174273+01:00</LastModified>
+      <Notes>Annual rate of renewal expense escalation</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>0.03</Value>
+      <Format>#,##0.00%</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Param_Tbl</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RenExpInit</Name>
+      <Parent>Expenses</Parent>
+      <Previous />
+      <LastModifiedBy>ClareStone</LastModifiedBy>
+      <LastModifiedOn>2025-06-26T14:06:32.6008197+01:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>2025-06-26T14:06:32.6008197+01:00</LastModified>
+      <Notes>Annual renewal expense at valuation date</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>0.00</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Range />
+      <LookUp />
+      <Parameters />
+      <Source>Param_Tbl</Source>
+    </Parameter>
+  </Params>
+  <Formulae>
+    <Formula>
+      <Name>Basis</Name>
+      <Parent />
+      <Previous>General</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>Charges</Name>
+      <Parent />
+      <Previous>Mortality</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>Expenses</Name>
+      <Parent />
+      <Previous>Charges</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>FMChge</Name>
+      <Parent>Charges</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Fund managment charge each period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Dim FMChgePCMth As Double = (1 + FMChgePC) ^ (1 / 12) - 1
+
+Return UnitFund(t) * FMChgePCMth</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>FundGthPCMth</Name>
+      <Parent>Basis</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Monthly rate of fund growth</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return (1 + FundGthPC) ^ (1 / 12) - 1</Value>
+      <Format>#,##0.00%</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>Funds</Name>
+      <Parent />
+      <Previous>Expenses</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>General</Name>
+      <Parent />
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>InvCon</Name>
+      <Parent>Premiums</Parent>
+      <Previous>PremPay</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Proportion of premium allocated to purchase units</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; RedAllocPeriod Then Return InvCon1
+
+Return InvCon2</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>MortChge</Name>
+      <Parent>Mortality</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Mortality charge each period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return Parent.MortChge(t) / 3</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>Mortality</Name>
+      <Parent />
+      <Previous>Premiums</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>PremPay</Name>
+      <Parent>Premiums</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Premium payable each period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t Mod (12 / PremFreq) = 0 Then Return PremInit / PremFreq
+
+Return 0</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>Premiums</Name>
+      <Parent />
+      <Previous>Basis</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>ProjTerm</Name>
+      <Parent>General</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>Return Term * 12</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>RenExp</Name>
+      <Parent>Expenses</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Renewal expense each period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt;= PeriodIF Then Return RenExpInit / 12
+
+If (t - PeriodIF) Mod 12 = 0 Then Return RenExp(t - 12) * (1 + RenExpEsc)
+
+Return RenExp(t - 1)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>Reserves</Name>
+      <Parent />
+      <Previous>Funds</Previous>
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>true</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes />
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType />
+      <Value />
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>SterlResCF</Name>
+      <Parent>Reserves</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Sterling reserve cash flow each period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return BoS * PremPay(t) + FMChge(t) - RenExp(t) </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+    <Formula>
+      <Name>UnitFund</Name>
+      <Parent>Funds</Parent>
+      <Previous />
+      <LastModifiedOn>0001-01-01T00:00:00</LastModifiedOn>
+      <CreatedBy />
+      <CreatedOn xsi:nil="true" />
+      <Folder>false</Folder>
+      <LastModified>0001-01-01T00:00:00</LastModified>
+      <Notes>Fund value each period</Notes>
+      <OpeningInformation />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t = 0 Then Return 0
+
+Return (UnitFund(t - 1) + PremPay(t - 1) * (1 - BoS) * InvCon(t - 1) _
+      - FMChge(t - 1) - MortChge(t - 1)) * (1 + FundGthPCMth())</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <IsUnitTest>false</IsUnitTest>
+    </Formula>
+  </Formulae>
+  <Runs />
+</Model>
