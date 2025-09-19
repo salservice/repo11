@@ -5,7 +5,7 @@
   <LastModifiedOn xsi:nil="true" />
   <CreatedOn xsi:nil="true" />
   <Folder>false</Folder>
-  <LastModified>2025-09-19T11:00:55.4848421+01:00</LastModified>
+  <LastModified>2025-09-19T11:04:20.5781371+01:00</LastModified>
   <Notes />
   <OpeningInformation />
   <IsExpanded>true</IsExpanded>
@@ -287,6 +287,6 @@
       </value>
     </item>
   </RevisionIds>
-  <CommitRef>b29e99d</CommitRef>
+  <CommitRef>19ed0e9</CommitRef>
   <OpenAsReadOnly>false</OpenAsReadOnly>
 </Project>
